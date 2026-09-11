@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventas - Andes Fresh</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-logo">Andes <span>Fresh</span></div>
+        <ul class="sidebar-menu">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="nuevo-pedido.html">Nuevo Pedido</a></li>
+            <li><a href="pedidos.html">Pedidos</a></li>
+            <li><a href="stock.html">Stock</a></li>
+            <li><a href="ventas.html">Ventas</a></li>
+            <li><a href="#">Clientes</a></li>
+            <li><a href="#">Proveedores</a></li>
+        </ul>
+        <div class="sidebar-logout">
+            <a href="#" onclick="logout()">Cerrar Sesión</a>
+        </div>
+    </aside>
+
+    <div class="main-content">
+        <header class="header">
+            <div class="header-left">
+                <div class="hamburger" id="hamburger-menu">☰</div>
+            </div>
+            <div class="header-right">
+                <div class="user-info">
+                    <div class="user-name" id="user-name-display">Usuario</div>
+                    <div class="user-role" id="user-role-display">Rol</div>
+                </div>
+            </div>
+        </header>
+
+        <main class="page-content">
+            <div class="page-header">
+                <h1 class="page-title">Panel de Ventas</h1>
+                <div class="breadcrumb">Inicio / Ventas (Gerencia)</div>
+            </div>
+
+            <div class="dashboard-cards">
+                <div class="stat-card green">
+                    <div class="stat-title">Vendedor con mayor venta</div>
+                    <div class="stat-value" id="stat-mejor-vendedor">-</div>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h3 class="mb-20">Ventas por Vendedor</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Vendedor</th>
+                                    <th>Zona</th>
+                                    <th>N.º Pedidos</th>
+                                    <th>Total Vendido</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-ventas-body">
+                                <!-- JS content -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="mb-20">Rendimiento</h3>
+                    <div class="chart-container" id="chart-vendedores">
+                        <!-- Chart injected via JS -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            &copy; 2026 Distribuidora Andes Fresh S.A.C.
+        </footer>
+    </div>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>

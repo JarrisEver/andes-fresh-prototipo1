@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de stock por almacén - Andes Fresh</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-logo">Andes <span>Fresh</span></div>
+        <ul class="sidebar-menu">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="nuevo-pedido.html">Nuevo Pedido</a></li>
+            <li><a href="pedidos.html">Pedidos</a></li>
+            <li><a href="stock.html">Stock</a></li>
+            <li><a href="ventas.html">Ventas</a></li>
+            <li><a href="#">Clientes</a></li>
+            <li><a href="#">Proveedores</a></li>
+        </ul>
+        <div class="sidebar-logout">
+            <a href="#" onclick="logout()">Cerrar Sesión</a>
+        </div>
+    </aside>
+
+    <div class="main-content">
+        <header class="header">
+            <div class="header-left">
+                <div class="hamburger" id="hamburger-menu">☰</div>
+            </div>
+            <div class="header-right">
+                <div class="user-info">
+                    <div class="user-name" id="user-name-display">Usuario</div>
+                    <div class="user-role" id="user-role-display">Rol</div>
+                </div>
+            </div>
+        </header>
+
+        <main class="page-content">
+            <div class="page-header">
+                <h1 class="page-title">Consulta de stock por almacén</h1>
+                <div class="breadcrumb">Inicio / Stock</div>
+            </div>
+
+            <div class="card">
+                <div class="form-row mb-20">
+                    <div class="form-group" style="flex: 2;">
+                        <input type="text" id="buscar-stock" class="form-control" placeholder="Buscar producto...">
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <select id="filtro-almacen" class="form-control">
+                            <option value="Todos">Todos los almacenes</option>
+                            <option value="Principal">Almacén Principal</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Categoría</th>
+                                <th>Almacén</th>
+                                <th>Stock Actual</th>
+                                <th>Stock Mínimo</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-stock-body">
+                            <!-- JS content -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            &copy; 2026 Distribuidora Andes Fresh S.A.C.
+        </footer>
+    </div>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>

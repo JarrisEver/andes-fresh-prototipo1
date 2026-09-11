@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Andes Fresh</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-logo">Andes <span>Fresh</span></div>
+        <ul class="sidebar-menu">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="nuevo-pedido.html">Nuevo Pedido</a></li>
+            <li><a href="pedidos.html">Pedidos</a></li>
+            <li><a href="stock.html">Stock</a></li>
+            <li><a href="ventas.html">Ventas</a></li>
+            <li><a href="#">Clientes</a></li>
+            <li><a href="#">Proveedores</a></li>
+        </ul>
+        <div class="sidebar-logout">
+            <a href="#" onclick="logout()">Cerrar Sesión</a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <div class="hamburger" id="hamburger-menu">☰</div>
+            </div>
+            <div class="header-right">
+                <div class="user-info">
+                    <div class="user-name" id="user-name-display">Usuario</div>
+                    <div class="user-role" id="user-role-display">Rol</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page Content -->
+        <main class="page-content">
+            <div class="page-header">
+                <h1 class="page-title">Dashboard</h1>
+                <div class="breadcrumb">Inicio / Dashboard</div>
+            </div>
+
+            <!-- Dashboard Cards -->
+            <div class="dashboard-cards">
+                <div class="stat-card">
+                    <div class="stat-title">Pedidos del día</div>
+                    <div class="stat-value" id="stat-pedidos-hoy">0</div>
+                </div>
+                <div class="stat-card orange">
+                    <div class="stat-title">Pedidos pendientes</div>
+                    <div class="stat-value" id="stat-pendientes">0</div>
+                </div>
+                <div class="stat-card green">
+                    <div class="stat-title">Ventas del día</div>
+                    <div class="stat-value" id="stat-ventas">S/ 0.00</div>
+                </div>
+                <div class="stat-card red">
+                    <div class="stat-title">Stock crítico</div>
+                    <div class="stat-value" id="stat-stock">0</div>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <!-- Pedidos Recientes -->
+                <div class="card">
+                    <h3 class="mb-20">Pedidos Recientes</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>N.º Pedido</th>
+                                    <th>Cliente</th>
+                                    <th>Vendedor</th>
+                                    <th>Fecha</th>
+                                    <th>Total</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dashboard-pedidos-body">
+                                <!-- Data injected via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Gráfico Mock -->
+                <div class="card">
+                    <h3 class="mb-20">Ventas por Zona (Mensual)</h3>
+                    <div class="chart-container" id="chart-ventas">
+                        <!-- Chart injected via JS -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            &copy; 2026 Distribuidora Andes Fresh S.A.C.
+        </footer>
+    </div>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>
